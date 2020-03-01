@@ -66,11 +66,6 @@ body {
 	color: red;
 }
 
-hr {
-	border-top   : 1px solid #1d5b99;
-	border-bottom: 1px solid #5195d9;
-}
-
 a {
 	color: #707070;
 }
@@ -214,6 +209,11 @@ a:hover {
 	color           : #333333;
 }
 
+.blue-bg {
+	background-color: #37beed;
+	color           : #333333;
+}
+
 /***********************Index Page*********************************/
 .carousel-indicators {
 	bottom: -45px;
@@ -312,8 +312,14 @@ a:hover {
 
 .testimonial-user {
 	display        : flex;
+	flex-flow      : column;
+	justify-content: start;
+}
+
+.testimonial-user-index {
+	display        : flex;
 	flex-flow      : row;
-	justify-content: space-between;
+	justify-content: space-around;
 }
 
 .user-details {
