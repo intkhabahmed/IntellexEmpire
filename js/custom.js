@@ -20,11 +20,11 @@ $(function () {
 
 	var pp_positionX = 0
 	$('#next_btn').on('click', () => {
-		if ($('#popular-solutions-slider').width() > $("#popular-solutions-slider div").width() * (6 + 0.5)) {
+		if ($('#popular-solutions-slider').width() > $("#popular-solutions-slider div").width() * (7 + 0.5)) {
 			return;
 		}
-		if (Math.abs($('#popular-solutions-slider').width() - $("#popular-solutions-slider div").width() * (6 + 0.5)) < 100) {
-			if (pp_positionX <= ($("#popular-solutions-slider div").width() + 40)) {
+		if (Math.abs($('#popular-solutions-slider').width() - $("#popular-solutions-slider div").width() * 7) < 200) {
+			if (pp_positionX <= ($("#popular-solutions-slider div").width() * 2 + 80)) {
 				pp_positionX += $("#popular-solutions-slider div").width() + 40;
 				$('#next_btn').attr("src", "images/next_arrow_active.jpg")
 				$('#prev_btn').attr("src", "images/back_arrow_active.jpg")
@@ -33,7 +33,7 @@ $(function () {
 				$('#prev_btn').attr("src", "images/back_arrow_active.jpg")
 			}
 		} else {
-			if (pp_positionX < $("#popular-solutions-slider div").width() * (6 - 0.5)) {
+			if (pp_positionX < $("#popular-solutions-slider div").width() * (7 - 0.5)) {
 				pp_positionX += $("#popular-solutions-slider div").width() + 40;
 				$('#next_btn').attr("src", "images/next_arrow_active.jpg")
 				$('#prev_btn').attr("src", "images/back_arrow_active.jpg")
@@ -45,7 +45,7 @@ $(function () {
 		$('#popular-solutions-slider').css({ 'transform': 'translate(-' + pp_positionX + 'px, 0px)' });
 	});
 	$('#prev_btn').on('click', () => {
-		if ($('#popular-solutions-slider').width() > $("#popular-solutions-slider div").width() * (6 + 0.5)) {
+		if ($('#popular-solutions-slider').width() > $("#popular-solutions-slider div").width() * (7 + 0.5)) {
 			return;
 		}
 		if (pp_positionX > 0) {
@@ -59,7 +59,7 @@ $(function () {
 				$('#prev_btn').attr("src", "images/back_arrow_active.jpg")
 			}
 		} else {
-			if (Math.abs($('#popular-solutions-slider').width() - $("#popular-solutions-slider div").width() * (6 + 1)) < 50) {
+			if (Math.abs($('#popular-solutions-slider').width() - $("#popular-solutions-slider div").width() * (7 + 1)) < 50) {
 				pp_positionX = 0
 				$('#next_btn').attr("src", "images/next_arrow_active.jpg")
 				$('#prev_btn').attr("src", "images/back_arrow_inactive.jpg")
