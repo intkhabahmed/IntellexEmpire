@@ -132,4 +132,10 @@ $(function () {
 		localStorage.setItem("disclaimer", true);
 	});
 
+	$(".read_more_btn>img").hover(function () {
+		$(this).attr("src", "images/testi_arrow_hover.png");
+	}, function () {
+		$(this).attr("src", "images/testi_arrow.png");
+	});
+
 });
