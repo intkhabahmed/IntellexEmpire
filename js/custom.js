@@ -20,52 +20,52 @@ $(function () {
 
 	var pp_positionX = 0
 	$('#next_btn').on('click', () => {
-		if ($('#popular-solutions-slider').width() > $("#popular-solutions-slider div").width() * (7 + 0.5)) {
+		if ($('#popular-solutions-slider').width() > $("#popular-solutions-slider div").width() * (8 + 0.5)) {
 			return;
 		}
-		if (Math.abs($('#popular-solutions-slider').width() - $("#popular-solutions-slider div").width() * 7) < 200) {
-			if (pp_positionX <= ($("#popular-solutions-slider div").width() * 2 + 80)) {
+		if (Math.abs($('#popular-solutions-slider').width() - $("#popular-solutions-slider div").width() * 7.5) < 300) {
+			if (pp_positionX <= ($("#popular-solutions-slider div").width() * 3 + 120)) {
 				pp_positionX += $("#popular-solutions-slider div").width() + 40;
-				$('#next_btn').attr("src", "images/next_arrow_active.jpg")
-				$('#prev_btn').attr("src", "images/back_arrow_active.jpg")
+				$('#next_btn').attr("src", "images/next_arrow_active.png")
+				$('#prev_btn').attr("src", "images/back_arrow_active.png")
 			} else {
-				$('#next_btn').attr("src", "images/next_arrow_inactive.jpg")
-				$('#prev_btn').attr("src", "images/back_arrow_active.jpg")
+				$('#next_btn').attr("src", "images/next_arrow_inactive.png")
+				$('#prev_btn').attr("src", "images/back_arrow_active.png")
 			}
 		} else {
-			if (pp_positionX < $("#popular-solutions-slider div").width() * (7 - 0.5)) {
+			if (pp_positionX < $("#popular-solutions-slider div").width() * (8 - 0.5)) {
 				pp_positionX += $("#popular-solutions-slider div").width() + 40;
-				$('#next_btn').attr("src", "images/next_arrow_active.jpg")
-				$('#prev_btn').attr("src", "images/back_arrow_active.jpg")
+				$('#next_btn').attr("src", "images/next_arrow_active.png")
+				$('#prev_btn').attr("src", "images/back_arrow_active.png")
 			} else {
-				$('#next_btn').attr("src", "images/next_arrow_inactive.jpg")
-				$('#prev_btn').attr("src", "images/back_arrow_active.jpg")
+				$('#next_btn').attr("src", "images/next_arrow_inactive.png")
+				$('#prev_btn').attr("src", "images/back_arrow_active.png")
 			}
 		}
 		$('#popular-solutions-slider').css({ 'transform': 'translate(-' + pp_positionX + 'px, 0px)' });
 	});
 	$('#prev_btn').on('click', () => {
-		if ($('#popular-solutions-slider').width() > $("#popular-solutions-slider div").width() * (7 + 0.5)) {
+		if ($('#popular-solutions-slider').width() > $("#popular-solutions-slider div").width() * (8 + 0.5)) {
 			return;
 		}
 		if (pp_positionX > 0) {
 			pp_positionX -= $("#popular-solutions-slider div").width() + 40;
 			if (pp_positionX < 0) {
 				pp_positionX = 0
-				$('#next_btn').attr("src", "images/next_arrow_active.jpg")
-				$('#prev_btn').attr("src", "images/back_arrow_inactive.jpg")
+				$('#next_btn').attr("src", "images/next_arrow_active.png")
+				$('#prev_btn').attr("src", "images/back_arrow_inactive.png")
 			} else {
-				$('#next_btn').attr("src", "images/next_arrow_active.jpg")
-				$('#prev_btn').attr("src", "images/back_arrow_active.jpg")
+				$('#next_btn').attr("src", "images/next_arrow_active.png")
+				$('#prev_btn').attr("src", "images/back_arrow_active.png")
 			}
 		} else {
-			if (Math.abs($('#popular-solutions-slider').width() - $("#popular-solutions-slider div").width() * (7 + 1)) < 50) {
+			if (Math.abs($('#popular-solutions-slider').width() - $("#popular-solutions-slider div").width() * (8 + 1)) < 50) {
 				pp_positionX = 0
-				$('#next_btn').attr("src", "images/next_arrow_active.jpg")
-				$('#prev_btn').attr("src", "images/back_arrow_inactive.jpg")
+				$('#next_btn').attr("src", "images/next_arrow_active.png")
+				$('#prev_btn').attr("src", "images/back_arrow_inactive.png")
 			} else {
-				$('#next_btn').attr("src", "images/next_arrow_active.jpg")
-				$('#prev_btn').attr("src", "images/back_arrow_inactive.jpg")
+				$('#next_btn').attr("src", "images/next_arrow_active.png")
+				$('#prev_btn').attr("src", "images/back_arrow_inactive.png")
 			}
 
 		}
@@ -80,20 +80,20 @@ $(function () {
 		if (Math.abs($('#testimonials-slider').width() - $("#testimonials-slider div div").width() * 3) < 100) {
 			if (tm_positionX < $("#testimonials-slider div div").width()) {
 				tm_positionX += $("#testimonials-slider div div").width() + 20;
-				$('#tnext_btn').attr("src", "images/next_arrow_active.jpg")
-				$('#tprev_btn').attr("src", "images/back_arrow_active.jpg")
+				$('#tnext_btn').attr("src", "images/next_arrow_active.png")
+				$('#tprev_btn').attr("src", "images/back_arrow_active.png")
 			} else {
-				$('#tnext_btn').attr("src", "images/next_arrow_inactive.jpg")
-				$('#tprev_btn').attr("src", "images/back_arrow_active.jpg")
+				$('#tnext_btn').attr("src", "images/next_arrow_inactive.png")
+				$('#tprev_btn').attr("src", "images/back_arrow_active.png")
 			}
 		} else {
 			if (tm_positionX < $("#testimonials-slider div div").width() * (3 - 0.5)) {
 				tm_positionX += $("#testimonials-slider div div").width() + 20;
-				$('#tnext_btn').attr("src", "images/next_arrow_active.jpg")
-				$('#tprev_btn').attr("src", "images/back_arrow_active.jpg")
+				$('#tnext_btn').attr("src", "images/next_arrow_active.png")
+				$('#tprev_btn').attr("src", "images/back_arrow_active.png")
 			} else {
-				$('#tnext_btn').attr("src", "images/next_arrow_inactive.jpg")
-				$('#tprev_btn').attr("src", "images/back_arrow_active.jpg")
+				$('#tnext_btn').attr("src", "images/next_arrow_inactive.png")
+				$('#tprev_btn').attr("src", "images/back_arrow_active.png")
 			}
 		}
 		$('#testimonials-slider').css({ 'transform': 'translate(-' + tm_positionX + 'px, 0px)' });
@@ -106,20 +106,20 @@ $(function () {
 			tm_positionX -= $("#testimonials-slider div div").width() + 20;
 			if (tm_positionX < 0) {
 				tm_positionX = 0
-				$('#tnext_btn').attr("src", "images/next_arrow_active.jpg")
-				$('#tprev_btn').attr("src", "images/back_arrow_inactive.jpg")
+				$('#tnext_btn').attr("src", "images/next_arrow_active.png")
+				$('#tprev_btn').attr("src", "images/back_arrow_inactive.png")
 			} else {
-				$('#tnext_btn').attr("src", "images/next_arrow_active.jpg")
-				$('#tprev_btn').attr("src", "images/back_arrow_active.jpg")
+				$('#tnext_btn').attr("src", "images/next_arrow_active.png")
+				$('#tprev_btn').attr("src", "images/back_arrow_active.png")
 			}
 		} else {
 			if (Math.abs($('#testimonials-slider').width() - $("#testimonials-slider div div").width() * (3 + 1)) < 50) {
 				tm_positionX = 0
-				$('#tnext_btn').attr("src", "images/next_arrow_active.jpg")
-				$('#tprev_btn').attr("src", "images/back_arrow_inactive.jpg")
+				$('#tnext_btn').attr("src", "images/next_arrow_active.png")
+				$('#tprev_btn').attr("src", "images/back_arrow_inactive.png")
 			} else {
-				$('#tnext_btn').attr("src", "images/next_arrow_active.jpg")
-				$('#tprev_btn').attr("src", "images/back_arrow_inactive.jpg")
+				$('#tnext_btn').attr("src", "images/next_arrow_active.png")
+				$('#tprev_btn').attr("src", "images/back_arrow_inactive.png")
 			}
 
 		}

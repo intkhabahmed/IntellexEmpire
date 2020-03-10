@@ -130,8 +130,8 @@ a:hover {
 .sub-head {
 	font-family: Roboto;
 	font-style : normal;
-	font-size  : 70px;
-	line-height: 64px;
+	font-size  : 55px;
+	line-height: 60px;
 	color      : #ffffff;
 }
 
@@ -310,7 +310,7 @@ a:hover {
 }
 
 .testimonial-bg {
-	background-color: #ebe9ee;
+	background: linear-gradient(white 50%, #ebe9ee 50%);
 }
 
 .testimonial-container {
@@ -396,13 +396,6 @@ a:hover {
 		height: 70px;
 	}
 
-	.cover-text {
-		position : absolute;
-		left     : 5%;
-		bottom   : -225px;
-		max-width: 55%;
-	}
-
 	.navbar-nav>.active div {
 		display: block;
 		margin : 0 auto;
@@ -426,18 +419,12 @@ a:hover {
 	}
 
 	.cover-text p:nth-child(1) {
-		font-size: 5vw;
+		font-size: 3vw;
 	}
 
 	.cover-text p:nth-child(2) {
-		font-size: 7vw;
-	}
-
-	.cover-text {
-		position : absolute;
-		left     : 5%;
-		bottom   : -225px;
-		max-width: 55%;
+		font-size  : 5vw;
+		line-height: 6vw;
 	}
 
 	#detailWindow {
@@ -487,18 +474,12 @@ a:hover {
 	}
 
 	.cover-text p:nth-child(1) {
-		font-size: 6vw;
+		font-size: 3vw;
 	}
 
 	.cover-text p:nth-child(2) {
-		font-size: 10vw;
-	}
-
-	.cover-text {
-		position : absolute;
-		left     : 5%;
-		bottom   : -225px;
-		max-width: 75%;
+		font-size  : 5vw;
+		line-height: 6vw;
 	}
 
 	#detailWindow {
@@ -517,6 +498,17 @@ a:hover {
 
 	.testimonial {
 		min-width: 40%;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.cover-text p:nth-child(1) {
+		font-size: 7vw;
+	}
+
+	.cover-text p:nth-child(2) {
+		font-size  : 10vw;
+		line-height: 12vw;
 	}
 }
 
@@ -549,15 +541,17 @@ a:hover {
 
 /***********************Contact******************************************/
 .contact-cover-bg {
-	background: url("../images/contact_banner.png") no-repeat;
-	width     : 100%;
-	min-height: 300px;
+	background         : url("../images/contact_banner.png") no-repeat;
+	width              : 100%;
+	min-height         : 300px;
+	background-position: center;
 }
 
 .about-cover-bg {
-	background: url("../images/aboutus_banner.png") no-repeat;
-	width     : 100%;
-	min-height: 300px;
+	background         : url("../images/aboutus_banner.png") no-repeat;
+	width              : 100%;
+	min-height         : 300px;
+	background-position: center;
 }
 
 .form-container {
@@ -576,6 +570,9 @@ a:hover {
 	min-height         : 300px;
 	position           : relative;
 	background-position: center;
+	display            : flex;
+	flex-flow          : column;
+	justify-content    : center;
 }
 
 .solution-link.active a {
@@ -593,10 +590,6 @@ a:hover {
 	background-color   : #412c51;
 	/* margin-top      : 5%; */
 	clear              : right;
-}
-
-#footer footer {
-	margin-top: 30px;
 }
 
 #footer p {
