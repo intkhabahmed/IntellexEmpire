@@ -23,9 +23,9 @@ $(function () {
 		if ($('#popular-solutions-slider').width() > $("#popular-solutions-slider div").width() * (6 + 0.5)) {
 			return;
 		}
-		if (Math.abs($('#popular-solutions-slider').width() - $("#popular-solutions-slider div").width() * 5) < 100) {
-			if (pp_positionX < $("#popular-solutions-slider div").width()) {
-				pp_positionX += $("#popular-solutions-slider div").width() + 20;
+		if (Math.abs($('#popular-solutions-slider').width() - $("#popular-solutions-slider div").width() * (6 + 0.5)) < 100) {
+			if (pp_positionX <= ($("#popular-solutions-slider div").width() + 40)) {
+				pp_positionX += $("#popular-solutions-slider div").width() + 40;
 				$('#next_btn').attr("src", "images/next_arrow_active.jpg")
 				$('#prev_btn').attr("src", "images/back_arrow_active.jpg")
 			} else {
@@ -33,8 +33,8 @@ $(function () {
 				$('#prev_btn').attr("src", "images/back_arrow_active.jpg")
 			}
 		} else {
-			if (pp_positionX < $("#popular-solutions-slider div").width() * (5 - 0.5)) {
-				pp_positionX += $("#popular-solutions-slider div").width() + 20;
+			if (pp_positionX < $("#popular-solutions-slider div").width() * (6 - 0.5)) {
+				pp_positionX += $("#popular-solutions-slider div").width() + 40;
 				$('#next_btn').attr("src", "images/next_arrow_active.jpg")
 				$('#prev_btn').attr("src", "images/back_arrow_active.jpg")
 			} else {
@@ -49,7 +49,7 @@ $(function () {
 			return;
 		}
 		if (pp_positionX > 0) {
-			pp_positionX -= $("#popular-solutions-slider div").width() + 20;
+			pp_positionX -= $("#popular-solutions-slider div").width() + 40;
 			if (pp_positionX < 0) {
 				pp_positionX = 0
 				$('#next_btn').attr("src", "images/next_arrow_active.jpg")

@@ -78,6 +78,10 @@ a:hover {
 	color: #ff682a !important;
 }
 
+.color-blue {
+	color: #37beed !important;
+}
+
 .heading {
 	font-family   : Roboto light;
 	font-style    : normal;
@@ -157,16 +161,19 @@ a:hover {
 }
 
 .card {
-	max-height   : 350px;
+	max-height   : 360px;
 	padding      : 0;
 	margin       : 1.6%;
-	box-shadow   : 2px 0 10px 0 grey;
+	box-shadow   : 1px 0 5px 0 #80808059;
 	border-radius: 0.5rem;
 }
 
 .card-body {
-	text-align: center;
-	padding   : 0.5rem;
+	text-align   : center;
+	padding      : 0.5rem;
+	display      : flex;
+	flex-flow    : column;
+	justify-content: space-between;
 }
 
 .card-title {
@@ -208,6 +215,10 @@ a:hover {
 .orange-bg {
 	background-color: #fd8858;
 	color           : #333333;
+}
+
+.white-bg {
+	background-color: #ffffff;
 }
 
 .blue-bg {
@@ -266,7 +277,7 @@ a:hover {
 }
 
 .container-cover {
-	margin-top: 100px;
+	margin-top: 5%;
 }
 
 .solutions-slider-container {
@@ -295,6 +306,10 @@ a:hover {
 
 .indicators-btn:hover {
 	color: #707070;
+}
+
+.testimonial-bg {
+	background-color: #ebe9ee;
 }
 
 .testimonial-container {
@@ -383,7 +398,7 @@ a:hover {
 	.cover-text {
 		position : absolute;
 		left     : 5%;
-		bottom   : -283px;
+		bottom   : -225px;
 		max-width: 55%;
 	}
 
@@ -420,7 +435,7 @@ a:hover {
 	.cover-text {
 		position : absolute;
 		left     : 5%;
-		bottom   : -283px;
+		bottom   : -225px;
 		max-width: 55%;
 	}
 
@@ -481,7 +496,7 @@ a:hover {
 	.cover-text {
 		position : absolute;
 		left     : 5%;
-		bottom   : -283px;
+		bottom   : -225px;
 		max-width: 75%;
 	}
 
@@ -532,10 +547,16 @@ a:hover {
 }
 
 /***********************Contact******************************************/
-.cover-bg {
-	background: url("../images/inbnr2.png") no-repeat;
+.contact-cover-bg {
+	background: url("../images/contact_banner.png") no-repeat;
 	width     : 100%;
-	min-height: 566px;
+	min-height: 300px;
+}
+
+.about-cover-bg {
+	background: url("../images/aboutus_banner.png") no-repeat;
+	width     : 100%;
+	min-height: 300px;
 }
 
 .form-container {
@@ -549,32 +570,18 @@ a:hover {
 
 /***********************Solutions******************************************/
 .solutions-cover-bg {
-	background         : url("../images/inbnr1.png") no-repeat;
+	background         : url("../images/ls_banner.png") no-repeat;
 	width              : 100%;
-	min-height         : 566px;
+	min-height         : 300px;
 	position           : relative;
 	background-position: center;
 }
 
-.solutions-list {
-	list-style  : none;
-	padding-left: 0;
-}
-
-.solutions-list li {
-	padding      : 10px 0;
-	border-bottom: 1px solid #a7a7a7;
-}
-
-.solutions-list li.active i {
-	color: #000000;
-}
-
-.solutions-list li.active a {
+.solution-link.active a {
 	color: #ff682a;
 }
 
-.solutions-list li a:hover {
+.solution-link a:hover {
 	color          : #ff682a !important;
 	text-decoration: none;
 }
@@ -582,9 +589,9 @@ a:hover {
 
 /***********************Footer******************************************/
 #footer {
-	background-color: #412c51;
-	margin-top      : 5%;
-	clear           : right;
+	background-color   : #412c51;
+	/* margin-top      : 5%; */
+	clear              : right;
 }
 
 #footer footer {
