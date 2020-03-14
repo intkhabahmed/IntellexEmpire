@@ -180,7 +180,7 @@ a:hover {
 .card-title {
 	font-family: Roboto;
 	font-style : normal;
-	font-size  : 24px;
+	font-size  : 22px;
 	line-height: 28px;
 	color      : #412c51;
 }
@@ -224,6 +224,21 @@ a:hover {
 
 .blue-bg {
 	background-color: #37beed;
+	color           : #333333;
+}
+
+.light-green-bg {
+	background-color: #6eebaf;
+	color           : #333333;
+}
+
+.light-yellow-bg {
+	background-color: #fbe178;
+	color           : #333333;
+}
+
+.light-orange-bg {
+	background-color: #feab8a;
 	color           : #333333;
 }
 
@@ -329,7 +344,7 @@ a:hover {
 
 .testimonial-user {
 	display        : flex;
-	flex-flow      : column;
+	flex-flow      : row;
 	justify-content: start;
 }
 
@@ -374,6 +389,57 @@ a:hover {
 	overflow        : auto;
 	border-radius   : 16px;
 	display         : none;
+}
+
+.gallery-items-container {
+	display        : flex;
+	flex-flow      : row column wrap;
+	justify-content: space-between flex-start;
+}
+
+.card-main-header {
+	position       : relative;
+	display        : flex;
+	justify-content: center;
+	flex-flow      : column;
+}
+
+.hover-overlay {
+	z-index         : 1;
+	position        : absolute;
+	background-color: #0000009d;
+	width           : 100%;
+	height          : -webkit-fill-available;
+	display         : none;
+	cursor          : pointer;
+}
+
+.hover-overlay img {
+	margin-top: 35%;
+}
+
+#galleryWindow {
+	position: fixed;
+	width   : 50%;
+	top     : 10vh;
+	left    : 25%;
+	z-index : 1032;
+	opacity : 1;
+	display : none;
+}
+
+.close_btn {
+	position: absolute;
+	top     : 10px;
+	right   : 10px;
+	cursor  : pointer;
+}
+
+.gallery-indicators-container {
+	margin-left: -9%;
+	width      : 120%;
+	position   : absolute;
+	top        : 50%;
 }
 
 @media screen and (min-width: 991px) {
@@ -441,6 +507,17 @@ a:hover {
 		display         : none;
 	}
 
+	#galleryWindow {
+		position        : fixed;
+		width           : 80vw;
+		max-height      : 90vh;
+		top             : 5vh;
+		left            : 10vw;
+		z-index         : 1032;
+		background-color: #FFFFFF;
+		display         : none;
+	}
+
 	.testimonial {
 		min-width: 45%;
 	}
@@ -496,8 +573,22 @@ a:hover {
 		display         : none;
 	}
 
+	#galleryWindow {
+		position  : fixed;
+		width     : 80vw;
+		max-height: 90vh;
+		top       : 5vh;
+		left      : 10vw;
+		z-index   : 1032;
+		display   : none;
+	}
+
 	.testimonial {
 		min-width: 40%;
+	}
+
+	.gallery-items-container {
+		justify-content: space-evenly;
 	}
 }
 
@@ -509,6 +600,15 @@ a:hover {
 	.cover-text p:nth-child(2) {
 		font-size  : 10vw;
 		line-height: 12vw;
+	}
+
+	.gallery-items-container {
+		justify-content: space-around flex-start;
+	}
+
+	.gallery-indicators-container {
+		margin-left: -12%;
+		width      : 127%;
 	}
 }
 
@@ -609,7 +709,7 @@ a:hover {
 	top             : 0;
 	left            : 0;
 	width           : 100%;
-	opacity         : 0.7;
+	opacity         : 0.9;
 	min-height      : 100%;
 	display         : none;
 	background-color: #000000;

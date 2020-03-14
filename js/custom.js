@@ -138,4 +138,90 @@ $(function () {
 		$(this).attr("src", "images/testi_arrow.png");
 	});
 
+	var currentImageIndex = 0;
+
+	$(".card-main-header").hover(function () {
+		$(this).children("div").css("display", "block").click(function () {
+			$('.overlay').fadeIn();
+			$("#galleryWindow").fadeIn().children("img").attr("src", $(this).parent().children("img").attr("src"));
+			currentImageIndex = $(".gallery-items-container").children().index($(this).parent().parent());
+			$("#galleryWindow").children("p").text(titles[currentImageIndex]);
+		});
+	}, function () {
+		$(this).children("div").css("display", "none");
+	});
+
+	$(".close_btn").click(function () {
+		$("#galleryWindow").fadeOut();
+		$('.overlay').fadeOut();
+	}).hover(function () {
+		$(this).attr("src", "images/close_btn_hover.png");
+	}, function () {
+		$(this).attr("src", "images/close_btn.png");
+	});
+
+	var images = [
+		"images/patent.png",
+		"images/trademark.png",
+		"images/copyright.png",
+		"images/industrial-design.png",
+		"images/plantvariety.png",
+		"images/semiconductor.png",
+		"images/geographical.png",
+		"images/ip.png",
+		"images/otherlaws.png",
+	];
+
+	var titles = [
+		"Patents",
+		"Trademarks",
+		"Copyright",
+		"Industrial Design",
+		"Plant Variety and Farmers' Rights",
+		"Layout Designs of Semiconductor and Integrated Circuits",
+		"Geographical Indication",
+		"IP Business Driven Services",
+		"Other laws",
+	];
+
+	$("#g_next_btn").hover(function () {
+		$(this).attr("src", "images/gallery_nextarrow_hover.png");
+	}, function () {
+		$(this).attr("src", "images/gallery_nextarrow.png");
+	}).click(function () {
+		if (currentImageIndex < images.length - 1) {
+			++currentImageIndex;
+			$(".full_view_img").attr("src", images[currentImageIndex]);
+			$(".gallery-title").text(titles[currentImageIndex]);
+		}
+	});
+
+	$("#g_prev_btn").hover(function () {
+		$(this).attr("src", "images/gallery_backarrow_hover.png");
+	}, function () {
+		$(this).attr("src", "images/gallery_backarrow.png");
+	}).click(function () {
+		if (currentImageIndex > 0) {
+			--currentImageIndex;
+			$(".full_view_img").attr("src", images[currentImageIndex]);
+			$(".gallery-title").text(titles[currentImageIndex]);
+		}
+	});
+
+	$("#contact_form").submit(function () {
+		var firstName = $("#first_name").val();
+		var lastName = $("#last_name").val();
+		var mobile = $("#mobile").val();
+		var email = $("#email").val();
+		var message = $("#message").val();
+
+		if (firstName != "" && lastName != "" && mobile != "" && email != "" && message != "") {
+			$(".error_message").text("");
+			$("#body").text(message + "\n" + firstName + " " + lastName + "\n" + mobile);
+			return true;
+		} else {
+			$(".error_message").text("All fields are mandatory, please fill all values");
+			return false;
+		}
+	});
 });
