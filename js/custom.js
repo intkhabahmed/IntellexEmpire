@@ -180,8 +180,8 @@ $(function () {
 		"Plant Variety and Farmers' Rights",
 		"Layout Designs of Semiconductor and Integrated Circuits",
 		"Geographical Indication",
-		"IP Business Driven Services",
-		"Other laws",
+		"IP Strategy",
+		"Other Legal Solutions",
 	];
 
 	$("#g_next_btn").hover(function () {
