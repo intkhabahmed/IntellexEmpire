@@ -25,10 +25,9 @@ body {
 	background-color: transparent !important;
 } */
 
-.navbar-nav>.active div {
+.navbar-nav>.active div, .navbar-nav>.dropdown div.orange-bg {
 	height     : 1px;
 	width      : 36px;
-	margin-left: 15px;
 }
 
 .carousel-indicators li {
@@ -67,7 +66,7 @@ body {
 }
 
 a {
-	color: #707070;
+	color: #161616;
 }
 
 a:hover {
@@ -91,7 +90,18 @@ a:hover {
 	opacity       : 1;
 	mix-blend-mode: normal;
 	margin-top    : 10vh;
-	color         : #707070;
+	color         : #161616;
+}
+
+.sub-heading {
+	font-family   : Roboto light;
+	font-style    : normal;
+	font-size     : 24px;
+	line-height   : 30px;
+	opacity       : 1;
+	mix-blend-mode: normal;
+	margin-top    : 5vh;
+	color         : #161616;
 }
 
 .content-heading {
@@ -108,7 +118,7 @@ a:hover {
 	font-weight: normal;
 	font-size  : 20px;
 	line-height: 30px;
-	color      : #707070;
+	color      : #161616;
 }
 
 .content-text-sm {
@@ -243,6 +253,27 @@ a:hover {
 }
 
 /***********************Index Page*********************************/
+
+.dropdown-menu {
+	background-color: #412c51;
+}
+
+.dropdown-item {
+	color: #ffffff;
+}
+
+.dropdown-item:hover {
+	background-color: transparent;
+}
+
+.navbar-nav a:hover {
+	color: #ff682a !important;
+}
+
+.nav-item.active div.orange-bg, .nav-item.dropdown div.orange-bg {
+	height: 2px;
+}
+
 .carousel-indicators {
 	bottom: -45px;
 }
@@ -288,7 +319,7 @@ a:hover {
 	font-style : normal;
 	font-weight: bold;
 	font-size  : 72px;
-	line-height: 64px;
+	line-height: 76px;
 	color      : #ffffff;
 }
 
@@ -440,6 +471,24 @@ a:hover {
 	width      : 120%;
 	position   : absolute;
 	top        : 50%;
+}
+
+.our-team {
+	position: relative;
+}
+
+.our-team a {
+	position: absolute;
+	top: 0;
+	left: 25%;
+}
+
+.our-team a:hover {
+	color: #ff682a !important;
+}
+
+.scrim {
+	text-shadow: 1px 1px #333333;
 }
 
 @media screen and (min-width: 991px) {
