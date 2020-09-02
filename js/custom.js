@@ -18,6 +18,8 @@ $(function () {
 		$(this).parent().addClass("active");
 	});
 
+	$(".left-menu>div div div.active").parent().css("background-color", "#412c51");
+
 	var pp_positionX = 0
 	$('#next_btn').on('click', () => {
 		if ($('#popular-solutions-slider').width() > $("#popular-solutions-slider div").width() * (8 + 0.5)) {
@@ -74,12 +76,12 @@ $(function () {
 
 	var tm_positionX = 0
 	$('#tnext_btn').on('click', () => {
-		if ($('#testimonials-slider').width() > $("#testimonials-slider div div").width() * (3 + 0.5)) {
+		if ($('#testimonials-slider').width() > $("#testimonials-slider div div").width() * (5 + 0.5)) {
 			return;
 		}
-		if (Math.abs($('#testimonials-slider').width() - $("#testimonials-slider div div").width() * 3) < 100) {
-			if (tm_positionX < $("#testimonials-slider div div").width()) {
-				tm_positionX += $("#testimonials-slider div div").width() + 20;
+		if (window.innerWidth < 400) {
+			if (tm_positionX < $("#testimonials-slider div div").width() * (6 - 1.5)) {
+				tm_positionX += $("#testimonials-slider div div").width() + 40;
 				$('#tnext_btn').attr("src", "images/next_arrow_active.png")
 				$('#tprev_btn').attr("src", "images/back_arrow_active.png")
 			} else {
@@ -87,8 +89,8 @@ $(function () {
 				$('#tprev_btn').attr("src", "images/back_arrow_active.png")
 			}
 		} else {
-			if (tm_positionX < $("#testimonials-slider div div").width() * (3 - 0.5)) {
-				tm_positionX += $("#testimonials-slider div div").width() + 20;
+			if (tm_positionX < $("#testimonials-slider div div").width() * (5 - 1.8)) {
+				tm_positionX += $("#testimonials-slider div div").width() + 40;
 				$('#tnext_btn').attr("src", "images/next_arrow_active.png")
 				$('#tprev_btn').attr("src", "images/back_arrow_active.png")
 			} else {
@@ -99,7 +101,7 @@ $(function () {
 		$('#testimonials-slider').css({ 'transform': 'translate(-' + tm_positionX + 'px, 0px)' });
 	});
 	$('#tprev_btn').on('click', () => {
-		if ($('#testimonials-slider').width() > $("#testimonials-slider div div").width() * (3 + 0.5)) {
+		if ($('#testimonials-slider').width() > $("#testimonials-slider div div").width() * (5 + 0.5)) {
 			return;
 		}
 		if (tm_positionX > 0) {
@@ -113,7 +115,7 @@ $(function () {
 				$('#tprev_btn').attr("src", "images/back_arrow_active.png")
 			}
 		} else {
-			if (Math.abs($('#testimonials-slider').width() - $("#testimonials-slider div div").width() * (3 + 1)) < 50) {
+			if (Math.abs($('#testimonials-slider').width() - $("#testimonials-slider div div").width() * (5 + 1)) < 50) {
 				tm_positionX = 0
 				$('#tnext_btn').attr("src", "images/next_arrow_active.png")
 				$('#tprev_btn').attr("src", "images/back_arrow_inactive.png")
@@ -178,7 +180,7 @@ $(function () {
 		"Copyright",
 		"Industrial Design",
 		"Plant Variety and Farmers' Rights",
-		"Layout Designs of Semiconductor and Integrated Circuits",
+		"Semiconductor Integrated Circuits Layout Design",
 		"Geographical Indication",
 		"IP Strategy",
 		"Other Legal Solutions",

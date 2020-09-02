@@ -25,9 +25,10 @@ body {
 	background-color: transparent !important;
 } */
 
-.navbar-nav>.active div, .navbar-nav>.dropdown div.orange-bg {
-	height     : 1px;
-	width      : 36px;
+.navbar-nav>.active div,
+.navbar-nav>.dropdown div.orange-bg {
+	height: 1px;
+	width : 36px;
 }
 
 .carousel-indicators li {
@@ -126,7 +127,7 @@ a:hover {
 	font-style : normal;
 	font-size  : 16px;
 	line-height: 20px;
-	color      : #a7a7a7;
+	color      : #161616;
 }
 
 .head {
@@ -140,9 +141,10 @@ a:hover {
 .sub-head {
 	font-family: Roboto;
 	font-style : normal;
+	font-weight: bold;
 	font-size  : 55px;
 	line-height: 60px;
-	color      : #ffffff;
+	color      : #ff682a;
 }
 
 .btn {
@@ -270,7 +272,8 @@ a:hover {
 	color: #ff682a !important;
 }
 
-.nav-item.active div.orange-bg, .nav-item.dropdown div.orange-bg {
+.nav-item.active div.orange-bg,
+.nav-item.dropdown div.orange-bg {
 	height: 2px;
 }
 
@@ -478,9 +481,12 @@ a:hover {
 }
 
 .our-team a {
-	position: absolute;
-	top: 0;
-	left: 25%;
+	position   : absolute;
+	bottom     : 10%;
+	left       : 25%;
+	color      : #ffffff;
+	font-size  : 26px;
+	font-weight: bold;
 }
 
 .our-team a:hover {
@@ -489,6 +495,43 @@ a:hover {
 
 .scrim {
 	text-shadow: 1px 1px #333333;
+}
+
+.our-clients-container {
+	padding-left : 16px;
+	padding-right: 16px;
+}
+
+hr {
+	margin-block-end: 0;
+	margin-block-start: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+	width: 100%;
+	border-top: 1px solid #a7a7a7;
+}
+
+.left-menu>div, .left-menu hr {
+	margin-top: 0!important;
+	background-color: #39a2cf;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.left-menu>div div:hover {
+	background-color: #3b84af;
+}
+
+.left-menu>div div div>a, .left-menu>div div div>a:hover {
+	color: #ffffff!important;
+}
+
+.left-menu>div div div.active>a {
+	color: #ff682a!important;
+}
+
+#footer p{
+	color: #a7a7a7;
 }
 
 @media screen and (min-width: 991px) {
@@ -659,6 +702,13 @@ a:hover {
 		margin-left: -12%;
 		width      : 127%;
 	}
+
+	.our-team img {
+		width: 100%;
+	}
+	.our-team a {
+		left: 13%;
+	}
 }
 
 .navbar-nav {
@@ -703,13 +753,22 @@ a:hover {
 	background-position: center;
 }
 
+.our-team-bg {
+	background         : url("../images/our_team_banner.png") no-repeat;
+	width              : 100%;
+	min-height         : 300px;
+	background-position: center;
+}
+
 .form-container {
 	background-color: #EEEEEE;
 	padding         : 5%;
 }
 
-#middle-container .row {
-	margin-top: 20px;
+#middle-container>div>div>div .row {
+	/* margin-top: 20px; */
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 /***********************Solutions******************************************/
