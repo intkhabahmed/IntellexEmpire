@@ -254,6 +254,10 @@ a:hover {
 	color           : #333333;
 }
 
+.purple-bg {
+	background-color: #412c51;
+}
+
 /***********************Index Page*********************************/
 
 .dropdown-menu {
@@ -307,6 +311,7 @@ a:hover {
 	color        : #333333;
 	text-align   : left;
 	padding      : 2%;
+	background-color: #412c51b8;
 }
 
 .caption-title {
