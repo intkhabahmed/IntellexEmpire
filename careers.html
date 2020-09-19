@@ -8,13 +8,13 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/custom.css">
-	<link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
 <body>
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="IntellexEmpire" ></a>
+            <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="IntellexEmpire"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -25,7 +25,6 @@
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" href="aboutus.html">ABOUT US <span class="sr-only">(current)</span></a>
-                        <div class="orange-bg"></div>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
@@ -40,7 +39,7 @@
                         <a class="nav-link" href="gallery.html">GALLERY <span class="sr-only">(current)</span></a>
                         <div class="orange-bg"></div>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link" href="careers.html">CAREER <span class="sr-only">(current)</span></a>
                         <div class="orange-bg"></div>
                     </li>
@@ -51,10 +50,40 @@
             </div>
         </nav>
     </div>
-    <img src="images/shadow_banner.png" alt="" class="w-100">
     <!-- <div class="row"> -->
+    <div class="career-cover-bg"></div>
     <div class="container-cover pb-5">
-        <h2 class="text-center">Under Construction</h2>
+        <div class="container" id="middle-container">
+            <h2 class="heading color-orange mt-0">Careers</h2>
+            <div class="row">
+                <div class="col-sm-12">
+                    <p class="content-text">IntellexEmpire aims for legal
+                        excellence. We seek to recruit and retain talented professionals who share our aim. We have
+                        opportunities for new as well as experienced lawyers, scientists, engineers, and IP experts. We
+                        are also hiring support staff such as paralegals and administrative officers. Prior experience
+                        in the field of Intellectual Property is not mandatory but would be an advantage.<br>
+                        We want to put together a team that is highly skilled, motivated and has strong communication
+                        skills. We are committed to providing a complete workplace for our employees to work, learn,
+                        collaborate, and grow.<br>
+                        Our current job openings are</p>
+                    <ul class="content-text">
+                        <li>Patent Agent - Patent Drafting, Patent Prosecution - Engineering, Pune, Full Time</li>
+                        <li>Paralegal - Indian Filing, Foreign Filing, Formalities & Prosecution, Pune, Full Time</li>
+                        <li>Advocate - IPR advoacte</li>
+                    </ul>
+                    <p class="content-text"><b>Internships</b><br>We believe in giving young
+                        students opportunities to gain experience in the field of Intellectual Property. Students
+                        selected as interns will be incorporated into a team based on their background and interest. We
+                        appreciate passion for work, hard work and the ability to learn quickly.<br>
+                        Job aspirants and students can apply for Job/Internships with a resume and a covering letter to
+                        <a class="color-blue" href="mailto:admin@intellexempire.com">admin@intellexempire.com</a>
+                        with subject - 'Job' or 'Internship'.
+                    </p>
+
+                </div>
+            </div><!-- row -->
+        </div>
+        <!--end container-->
     </div>
     <div id="footer">
         <br>
@@ -79,7 +108,8 @@
                         </p>
                         <p class="content-text-sm"><img src="images/conticon1.png" width="24">
                             enquiry@intellexempire.com</p>
-                        <p class="content-text-sm"><img src="images/conticon2.png" width="24"> +91 9764022991 | +91 9112072991</p>
+                        <p class="content-text-sm"><img src="images/conticon2.png" width="24"> +91 9764022991 | +91
+                            9112072991</p>
                     </div>
                 </div>
             </div>
@@ -88,20 +118,8 @@
     </div>
     <!--container cover-->
     <!--end row-->
-    <div class="overlay"></div>
-    <div id="galleryWindow">
-        <img src="" alt="" class="img img-responsive w-100 full_view_img">
-        <p class="color-white text-center gallery-title content-text-sm mt-2"></p>
-        <div>
-            <img src="images/close_btn.png" alt="" class="pull-right close_btn">
-        </div>
-        <div class="gallery-indicators-container clearfix">
-            <img src="images/gallery_backarrow.png" class="float-left indicators-btn" alt="Previous button"
-                id="g_prev_btn" width="24">
-            <img src="images/gallery_nextarrow.png" class="float-right indicators-btn" alt="Next button" id="g_next_btn"
-                width="24">
-        </div>
-    </div>
+    <div class="overlay" title="click to close"></div>
+    <div id="detailWindow"></div>
 
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>

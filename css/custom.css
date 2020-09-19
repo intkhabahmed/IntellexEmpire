@@ -762,6 +762,13 @@ hr {
 	background-position: center;
 }
 
+.career-cover-bg {
+	background         : url("../images/career_banner.png") no-repeat;
+	width              : 100%;
+	min-height         : 300px;
+	background-position: center;
+}
+
 .our-team-bg {
 	background         : url("../images/our_team_banner.png") no-repeat;
 	width              : 100%;
